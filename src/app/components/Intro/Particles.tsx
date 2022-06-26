@@ -33,16 +33,23 @@ export default function ParticlesDiv() {
         interactivity: {
           events: {
             onClick: {
-              enable: true,
               mode: "push",
             },
             onHover: {
               enable: true,
-              mode: "repulse",
+              mode: "grab",
+              parallax: {
+                enable: true,
+                force: 90,
+                smooth: 100,
+              },
             },
             resize: true,
           },
           modes: {
+            grab: {
+              distance: 120,
+            },
             push: {
               quantity: 4,
             },
@@ -67,7 +74,7 @@ export default function ParticlesDiv() {
           },
           links: {
             color: "#ffffff",
-            distance: 150,
+            distance: 100,
             enable: true,
             opacity: 0.5,
             width: 1,
@@ -89,7 +96,7 @@ export default function ParticlesDiv() {
             value: 80,
           },
           opacity: {
-            value: 0.5,
+            value: 0.2,
           },
           shape: {
             type: "circle",

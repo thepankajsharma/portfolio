@@ -2,6 +2,7 @@ import { loadFull } from "tsparticles";
 import { Avatar, Box, Grid, Typography } from "@mui/material";
 import AvatarPng from "../../../assets/images/AvatarMaker.png";
 import ParticlesDiv from "./Particles";
+import { KeyboardArrowDown } from "@mui/icons-material";
 
 export default function Intro() {
   return (
@@ -33,7 +34,19 @@ export default function Intro() {
             </Typography>
           </Typography>
         </Box>
-        <Typography
+        <KeyboardArrowDown
+          sx={{
+            width: "100%",
+            position: "absolute",
+            bottom: "20px",
+            textAlign: "center",
+          }}
+          fontSize="large"
+          className="ball"
+        />
+
+        {/* <Typography
+          className="ball"
           sx={{
             width: "100%",
             position: "absolute",
@@ -42,7 +55,7 @@ export default function Intro() {
           }}
         >
           Scroll Down
-        </Typography>
+        </Typography> */}
         {/* <Box
           p={5}
           sx={{
