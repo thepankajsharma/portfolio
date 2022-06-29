@@ -3,7 +3,7 @@ export const Colors = {
 };
 
 export const bodyStyle = {
-  // backgroundColor: "#111",
+  backgroundColor: "#111",
   color: "#fff",
   // p: "3rem",
 };

@@ -3,8 +3,19 @@ import { Avatar, Box, Grid, Typography } from "@mui/material";
 import AvatarPng from "../../../assets/images/AvatarMaker.png";
 import ParticlesDiv from "./Particles";
 import { KeyboardArrowDown } from "@mui/icons-material";
+import Typewriter from "typewriter-effect";
+import { display } from "@mui/system";
 
 export default function Intro() {
+  const handleType = (count: number) => {
+    // access word count number
+    console.log(count);
+  };
+
+  const handleDone = () => {
+    console.log(`Done after 5 loops!`);
+  };
+
   return (
     <>
       <Box sx={{ position: "relative" }}>
@@ -23,15 +34,67 @@ export default function Intro() {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <Typography sx={{ fontWeight: "400", m: "auto" }}>
-            <Typography variant="h2" className="linearGradientText">
+          <Typography sx={{ m: "auto" }}>
+            <Typography variant="h3" className="linearGradientText">
               Hi, My name is <br />
-              <strong>Pankaj Sharma.</strong>
+              <Typography variant="h1">
+                <strong>Pankaj Sharma.</strong>
+              </Typography>
             </Typography>
 
-            <Typography variant="h4">
-              I am a Full Stack Web Developer
+            <Typography variant="h5" sx={{ color: "#d0d0d0" }}>
+              I'm a{" "}
+              <Typography
+                variant="h5"
+                sx={{ display: "inline-flex !important", fontWeight: "bold" }}
+              >
+                <Typewriter
+                  options={{
+                    strings: [
+                      "Full Stack Web Developer",
+                      "Shopify App Developer",
+                      "Shopify Theme Developer",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </Typography>
             </Typography>
+
+            {/* <Typography>
+              Hello 
+            <Typewriter
+                  options={{
+                    strings: ["Hello", "World"],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+            </Typography>
+            <h1
+              style={{
+                paddingTop: "1rem",
+                margin: "auto 0",
+                fontWeight: "normal",
+              }}
+            >
+              I'm{" "}
+              <span style={{ fontWeight: "bold" }}>
+                
+                <Typewriter
+                  options={{
+                    strings: ["Hello", "World"],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </span>
+            </h1> */}
+
+            {/* <Typography variant="h4">
+              I am a Full Stack Web Developer
+            </Typography> */}
           </Typography>
         </Box>
         <KeyboardArrowDown

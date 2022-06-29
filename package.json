@@ -22,6 +22,7 @@
     "react-tsparticles": "^2.1.0",
     "tsparticles": "^2.1.0",
     "typescript": "^4.7.3",
+    "typewriter-effect": "^2.18.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -51,6 +52,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "TagCloud": "^2.2.0"
   }
 }

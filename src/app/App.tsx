@@ -1,13 +1,17 @@
-import { Typography } from "@mui/material";
+import React from "react";
 import "../assets/css/App.css";
 import Home from "./components/Home/Home";
 
 function App() {
-  return (
-    <>
-      <Home />
-    </>
-  );
+	console.log("App");
+
+	return (
+		<>
+			<Home />
+		</>
+	);
 }
 
-export default App;
+const apps = React.memo(App);
+
+export default apps;
